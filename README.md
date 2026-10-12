@@ -58,6 +58,19 @@ Please fix this immediately.
 }
 ```
 
+
+## Application Screenshot
+
+![SupportIQ Customer Support Ticket Classifier Dashboard] <img width="1136" height="795" alt="Screenshot 2026-10-12 191200" src="https://github.com/user-attachments/assets/d3bc4449-db52-41ba-bb5e-cd5410f54cd3" />
+<img width="1113" height="478" alt="Screenshot 2026-10-12 191212" src="https://github.com/user-attachments/assets/997c7fcc-1e89-44f1-a1c4-a7472655e063" />
+<img width="1158" height="735" alt="Screenshot 2026-10-12 191317" src="https://github.com/user-attachments/assets/87e26c0d-ba4a-49b9-be98-0c7e37e0f6cb" />
+<img width="1052" height="754" alt="Screenshot 2026-10-12 191408" src="https://github.com/user-attachments/assets/19198d9f-a2eb-4be8-815e-09dc1e755e71" />
+
+
+Try the live application:
+[Launch SupportIQ](https://customersupportticketclassifier-lbyh5w5d5yaesqm57tun7d.streamlit.app/)
+
+
 ## Installation and Setup
 
 ### 1. Clone the repository
