@@ -209,12 +209,17 @@ with st.container(border=True):
                 try:
                     st.session_state["last_result"] = classify_ticket(
                         ticket_text.strip()
-                    )
+                        )
                     st.session_state["last_ticket"] = ticket_text.strip()
                     st.session_state.pop("analysis_error", None)
                 except Exception as error:
+                    import traceback
                     st.session_state.pop("last_result", None)
-                    st.session_state["analysis_error"] = str(error)
+                    st.session_state["analysis_error"] = (
+                        f"{type(error).__name__}: {st.error}\n\n"
+                        f"{traceback.format_exc()}"
+                        )
+                print("Ticket analysis error:", traceback.format_exc())
 
 # ---------------- ERROR DISPLAY ----------------
 if st.session_state.get("analysis_error"):
