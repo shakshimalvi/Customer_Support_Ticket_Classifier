@@ -5,18 +5,27 @@ from unittest import result
 from openai import OpenAI
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
-api_key = os.getenv("NVIDIA_API_KEY")
+NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 
-if not api_key:
+if not NVIDIA_API_KEY:
+    try:
+        import streamlit as st
+        NVIDIA_API_KEY = st.secrets["NVIDIA_API_KEY"]
+    except Exception:
+        NVIDIA_API_KEY = None
+
+if not NVIDIA_API_KEY:
     raise ValueError(
-        "NVIDIA_API_KEY not found. Check your .env file."
+        "NVIDIA_API_KEY is missing. Configure it in your .env "
+        "file locally or in Streamlit Cloud Secrets."
     )
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key=api_key
+    api_key=NVIDIA_API_KEY
 )
 
 MODEL = "openai/gpt-oss-20b"
