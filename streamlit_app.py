@@ -3,6 +3,7 @@ import html
 import json
 import streamlit as st
 from app import classify_ticket
+import traceback
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
